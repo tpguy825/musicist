@@ -7,13 +7,13 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"preact": "^10.16.0",
-		"preact-render-to-string": "^6.2.0"
+		"preact": "^10.18.2",
+		"preact-render-to-string": "^6.2.2"
 	},
 	"devDependencies": {
-		"@preact/preset-vite": "^2.5.0",
+		"@preact/preset-vite": "^2.6.0",
 		"typescript": "^5.2.2",
-		"vike": "^0.4.143",
-		"vite": "^4.3.2"
+		"vike": "^0.4.144",
+		"vite": "^4.5.0"
 	}
 }
