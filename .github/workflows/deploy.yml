@@ -11,5 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: oven-sh/setup-bun@v1
+      - name: Install dependencies
+        run: bun i
+      - name: Set git token
+        run: git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
       - name: Deploy
-        run: bun i && bun run deploy
+        run: bun run deploy
