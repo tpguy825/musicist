@@ -6,5 +6,5 @@ import { defineConfig } from "vite";
 export default defineConfig({
 	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 	plugins: [preact(), ssr({ prerender: true })],
-	root: ".",
+	base: ".",
 });
