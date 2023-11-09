@@ -5,7 +5,7 @@
 	"devDependencies": {
 		"@openpgp/web-stream-tools": "^0.0.11-patch-0",
 		"bun-types": "latest",
-		"drizzle-kit": "^0.19.13"
+		"drizzle-kit": "^0.20.0"
 	},
 	"dependencies": {
 		"@elysiajs/jwt": "^0.7.0",
