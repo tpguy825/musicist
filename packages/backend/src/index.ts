@@ -1,3 +1,4 @@
+import cors from "@elysiajs/cors";
 import jwt from "@elysiajs/jwt";
 import { eq } from "drizzle-orm";
 import { Elysia, t } from "elysia";
@@ -6,6 +7,7 @@ import { z } from "zod";
 import { db } from "./db";
 import { accounts } from "./db/schema";
 import { env } from "./env";
+import { spotify } from "./spotify";
 
 async function encrypt(data: string) {
 	return openpgp.encrypt({
@@ -15,8 +17,13 @@ async function encrypt(data: string) {
 	});
 }
 
-new Elysia()
+const app = new Elysia()
 	.use(jwt({ secret: env.JWT_SECRET }))
+	.use(
+		cors({
+			origin: [/\*.musicist.uk$/, /\*.musicist.uk:\d+$/, /localhost:\d+$/],
+		}),
+	)
 	.get("/", () => "Hello World!")
 	.post(
 		"/login",
@@ -101,6 +108,21 @@ new Elysia()
 			}),
 		},
 	)
+	.post(
+		"/search",
+		async ({ query }) => {
+			const results = spotify.search(query.q);
+			return results;
+		},
+		{
+			query: t.Object({
+				q: t.String(),
+			}),
+		},
+	)
+
 	.listen(3000, ({ port }) => {
 		console.log("Listening on http://localhost:" + port);
 	});
+
+export type App = typeof app;

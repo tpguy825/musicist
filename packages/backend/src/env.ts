@@ -7,7 +7,8 @@ export const env = createEnv({
 		TURSO_URL: z.string(),
 		PGP_KEY: z.string(),
 		JWT_SECRET: z.string(),
-		RAPIDAPI_KEY: z.string(),
+		SPOTIFY_CLIENT_ID: z.string(),
+		SPOTIFY_CLIENT_SECRET: z.string(),
 	},
 
 	runtimeEnv: process.env,

@@ -44,5 +44,6 @@ module.exports = {
 		"@typescript-eslint/restrict-template-expressions": "off",
 		"@typescript-eslint/prefer-nullish-coalescing": "off",
 		"import/no-anonymous-default-export": "off",
+		"@typescript-eslint/triple-slash-reference": "off",
 	},
 };

@@ -8,6 +8,7 @@
 		"drizzle-kit": "^0.19.13"
 	},
 	"dependencies": {
+		"@elysiajs/cors": "^0.7.1",
 		"@elysiajs/jwt": "^0.7.0",
 		"@libsql/client": "^0.3.6",
 		"@t3-oss/env-core": "^0.7.1",
@@ -16,6 +17,9 @@
 	},
 	"scripts": {
 		"db:push": "drizzle-kit push:sqlite",
-		"db:studio": "drizzle-kit studio"
+		"db:studio": "drizzle-kit studio",
+		"start": "bun src/index.ts",
+		"start:smol": "bun --smol src/index.ts",
+		"dev": "bun --hot src/index.ts"
 	}
 }
