@@ -11,7 +11,7 @@ export function Page(_props: { url: string }) {
 	return (
 		<div>
 			<YoutubeWrapper
-				id="4AGSRqAdl94"
+				id={new URLSearchParams(location.search).get("v") || "4AGSRqAdl94"}
 				onReady={setPlayer}
 				onStateChange={(e) => {
 					switch (e) {
