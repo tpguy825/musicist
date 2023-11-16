@@ -15,7 +15,7 @@
 		"@preact/preset-vite": "^2.6.0",
 		"typescript": "^5.2.2",
 		"vike": "^0.4.144",
-		"vite": "^4.5.0",
+		"vite": "^5.0.0",
 		"backend": "workspace:*",
 		"@types/youtube-player": "^5.5.10",
 		"fast-deep-equal": "3.1.3",
