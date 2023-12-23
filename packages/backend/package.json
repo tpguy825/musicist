@@ -9,7 +9,7 @@
 	},
 	"dependencies": {
 		"@elysiajs/cors": "^0.7.1",
-		"@elysiajs/jwt": "^0.7.0",
+		"@elysiajs/jwt": "^0.8.0",
 		"@libsql/client": "^0.3.6",
 		"@t3-oss/env-core": "^0.7.1",
 		"drizzle-orm": "^0.28.6",
